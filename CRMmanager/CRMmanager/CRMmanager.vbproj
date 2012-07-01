@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CE69558-F772-44FE-B4D7-B0F6A9F85516}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CRMmanager</RootNamespace>
+    <AssemblyName>CRMmanagerDemo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CRMmanagerDemo.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CRMmanagerDemo.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Elegant.Ui.Common, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0" />
+    <Reference Include="Elegant.Ui.NavigationBar, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0" />
+    <Reference Include="Elegant.Ui.Ribbon, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\VSTO\v8.0\Microsoft.Office.Tools.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="MySql.Data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="SkinSoft.AquaSkin, Version=1.1.0.0, Culture=neutral, PublicKeyToken=24427c624576b01d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.Designer.vb">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CALL_STATISTICS1.designer.vb">
+      <DependentUpon>FRM_CALL_STATISTICS1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CALL_STATISTICS1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CALL_STATISTICS2.designer.vb">
+      <DependentUpon>FRM_CALL_STATISTICS2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CALL_STATISTICS2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_TELNO.Designer.vb">
+      <DependentUpon>FRM_CUSTOMER_TELNO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_TELNO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_FIND_ID_BY_TELNO.Designer.vb">
+      <DependentUpon>FRM_FIND_ID_BY_TELNO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_FIND_ID_BY_TELNO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_HISTORY_GINGUB.designer.vb">
+      <DependentUpon>FRM_HISTORY_GINGUB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_HISTORY_GINGUB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_HISTORY_CALLBACK.designer.vb">
+      <DependentUpon>FRM_HISTORY_CALLBACK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_HISTORY_CALLBACK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_HISTORY_VIP.designer.vb">
+      <DependentUpon>FRM_HISTORY_VIP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_HISTORY_VIP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CALLLOG.designer.vb">
+      <DependentUpon>FRM_CALLLOG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CALLLOG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CODELIST.designer.vb">
+      <DependentUpon>FRM_CODELIST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CODELIST.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER.designer.vb">
+      <DependentUpon>FRM_CUSTOMER.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_FIND.Designer.vb">
+      <DependentUpon>FRM_CUSTOMER_FIND.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_FIND.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_HISTORY_MODIFY.Designer.vb">
+      <DependentUpon>FRM_CUSTOMER_HISTORY_MODIFY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_HISTORY_MODIFY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_POPUP1.Designer.vb">
+      <DependentUpon>FRM_CUSTOMER_POPUP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CUSTOMER_POPUP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_FIND_CUSTOMERID.Designer.vb">
+      <DependentUpon>FRM_FIND_CUSTOMERID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_FIND_CUSTOMERID.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_HISTORY.designer.vb">
+      <DependentUpon>FRM_HISTORY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_HISTORY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_INNER_WORK.Designer.vb">
+      <DependentUpon>FRM_INNER_WORK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_INNER_WORK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_INNER_WORK_UPDATE.Designer.vb">
+      <DependentUpon>FRM_INNER_WORK_UPDATE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_INNER_WORK_UPDATE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MAIN.designer.vb">
+      <DependentUpon>FRM_MAIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MAIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_OUTWORK.designer.vb">
+      <DependentUpon>FRM_OUTWORK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_OUTWORK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_PWD_CHANGE.designer.vb">
+      <DependentUpon>FRM_PWD_CHANGE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_PWD_CHANGE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SAWON.designer.vb">
+      <DependentUpon>FRM_SAWON.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SAWON.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SCHEDULE.designer.vb">
+      <DependentUpon>FRM_SCHEDULE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SCHEDULE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_TELNO_ADD.Designer.vb">
+      <DependentUpon>FRM_TELNO_ADD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_TELNO_ADD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ZIPCODE.designer.vb">
+      <DependentUpon>FRM_ZIPCODE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_ZIPCODE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniCTI.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="CRMmanager.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRMmanager.Designer.vb">
+      <DependentUpon>CRMmanager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FRM_NOTI_MSG.Designer.vb">
+      <DependentUpon>FRM_NOTI_MSG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_NOTI_MSG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_CALL_STATISTICS3.designer.vb">
+      <DependentUpon>FRM_CALL_STATISTICS3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_CALL_STATISTICS3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_MONITOR.designer.vb">
+      <DependentUpon>FRM_MONITOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_MONITOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CALL_STATISTICS1.resx">
+      <DependentUpon>FRM_CALL_STATISTICS1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CALL_STATISTICS2.resx">
+      <DependentUpon>FRM_CALL_STATISTICS2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CUSTOMER_TELNO.resx">
+      <DependentUpon>FRM_CUSTOMER_TELNO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_FIND_ID_BY_TELNO.resx">
+      <DependentUpon>FRM_FIND_ID_BY_TELNO.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_HISTORY_GINGUB.resx">
+      <DependentUpon>FRM_HISTORY_GINGUB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_HISTORY_CALLBACK.resx">
+      <DependentUpon>FRM_HISTORY_CALLBACK.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_HISTORY_VIP.resx">
+      <DependentUpon>FRM_HISTORY_VIP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRMmanager.resx">
+      <DependentUpon>CRMmanager.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CALLLOG.resx">
+      <DependentUpon>FRM_CALLLOG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CODELIST.resx">
+      <DependentUpon>FRM_CODELIST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CUSTOMER.resx">
+      <DependentUpon>FRM_CUSTOMER.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CUSTOMER_FIND.resx">
+      <DependentUpon>FRM_CUSTOMER_FIND.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CUSTOMER_HISTORY_MODIFY.resx">
+      <DependentUpon>FRM_CUSTOMER_HISTORY_MODIFY.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CUSTOMER_POPUP1.resx">
+      <DependentUpon>FRM_CUSTOMER_POPUP1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_FIND_CUSTOMERID.resx">
+      <DependentUpon>FRM_FIND_CUSTOMERID.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_HISTORY.resx">
+      <DependentUpon>FRM_HISTORY.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_INNER_WORK.resx">
+      <DependentUpon>FRM_INNER_WORK.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_INNER_WORK_UPDATE.resx">
+      <DependentUpon>FRM_INNER_WORK_UPDATE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_OUTWORK.resx">
+      <DependentUpon>FRM_OUTWORK.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_PWD_CHANGE.resx">
+      <DependentUpon>FRM_PWD_CHANGE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SAWON.resx">
+      <DependentUpon>FRM_SAWON.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SCHEDULE.resx">
+      <DependentUpon>FRM_SCHEDULE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_TELNO_ADD.resx">
+      <DependentUpon>FRM_TELNO_ADD.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ZIPCODE.resx">
+      <DependentUpon>FRM_ZIPCODE.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_NOTI_MSG.resx">
+      <DependentUpon>FRM_NOTI_MSG.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_CALL_STATISTICS3.resx">
+      <DependentUpon>FRM_CALL_STATISTICS3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_MONITOR.resx">
+      <DependentUpon>FRM_MONITOR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_back_form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_save2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
