@@ -14,7 +14,7 @@ namespace WorkingClassSample
 
         static void Main(string[] args)
         {
-            string msg = "aaa";
+            string msg = "aaaa";
 
             string msg2 = "a{0}a";
             Console.WriteLine(msg+string.Format(msg2, "TERST"));
